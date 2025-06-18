@@ -20,7 +20,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Links
 
-- Solution URL: [Recipe page solution](#)
+- Solution URL: [Product preview card component solution](#)
 - Live Site URL: [https://janikjczcz.github.io/product-preview-card-component](https://janikjczcz.github.io/product-preview-card-component)
 
 ## My process

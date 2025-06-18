@@ -1,0 +1,55 @@
+:root {
+    /*colors*/
+    --black: #1C232B;
+    --grey: #6C7289;
+    --cream: #F2EAE2;
+    --white: #ffffff;
+    --green-500: #3D8168;
+    --green-700: #1A4032;
+    /*fonts*/
+    --font-fraunces: "Fraunces Bold", serif;
+    --font-montserrat-bold: "Montserrat Bold", sans-serif;
+    --font-montserrat-medium: "Montserrat Medium", sans-serif;
+    --font-xl: 3.2rem/1 var(--font-fraunces);
+    --font-btn: 1.4rem/1.1 var(--font-montserrat-bold);
+    --font-body: 1.4rem/1.6 var(--font-montserrat-medium);
+    --font-s: 1.3rem/1.2 var(--font-montserrat-medium);  /*strikethrough*/
+    --font-xs: 1.2rem/1.2 var(--font-montserrat-medium); /*letter-spacing: .5rem;*/
+    /*spacing*/
+    --space-50: .4rem;
+    --space-100: .8rem;
+    --space-200: 1.6rem;
+    --space-300: 2.4rem;
+    --space-400: 3.2rem;
+    --space-500: 4rem;
+
+
+}
+
+
+@font-face {
+    font-family: "Fraunces Bold", serif;
+    src: url("../fonts/Fraunces/Fraunces_72pt-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Montserrat Bold", sans-serif;
+    src: url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Montserrat Medium", sans-serif;
+    src: url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2");
+}
+
+
+*, *::before, *::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
