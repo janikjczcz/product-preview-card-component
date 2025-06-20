@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
 :root {
   /*colors*/
   --black: #1c232b;
@@ -7,14 +10,13 @@
   --green-500: #3d8168;
   --green-700: #1a4032;
   /*fonts*/
-  --font-fraunces: "Fraunces Bold", serif;
-  --font-montserrat-bold: "Montserrat Bold", sans-serif;
-  --font-montserrat-medium: "Montserrat Medium", sans-serif;
-  --font-xl: 3.2rem/1 var(--font-fraunces);
-  --font-btn: 1.4rem/1.1 var(--font-montserrat-bold);
-  --font-body: 1.4rem/1.6 var(--font-montserrat-medium);
-  --font-s: 1.3rem/1.2 var(--font-montserrat-medium); /*strikethrough*/
-  --font-xs: 1.2rem/1.2 var(--font-montserrat-medium); /*letter-spacing: .5rem;*/
+  --font-fraunces: "Fraunces", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-xl: 700 3.2rem/1 var(--font-fraunces);
+  --font-btn: 700 1.4rem/1.1 var(--font-montserrat);
+  --font-body: 500 1.4rem/1.6 var(--font-montserrat);
+  --font-s: 500 1.3rem/1.2 var(--font-montserrat); 
+  --font-xs: 500 1.2rem/1.2 var(--font-montserrat); 
   /*spacing*/
   --space-50: 0.4rem;
   --space-100: 0.8rem;
@@ -22,21 +24,6 @@
   --space-300: 2.4rem;
   --space-400: 3.2rem;
   --space-500: 4rem;
-}
-
-@font-face {
-  font-family: "Fraunces Bold", serif;
-  src: url("../fonts/Fraunces/Fraunces_72pt-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Montserrat Bold", sans-serif;
-  src: url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Montserrat Medium", sans-serif;
-  src: url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2");
 }
 
 .sr-only {
@@ -62,15 +49,21 @@ html {
   font-size: 62.5%;
 }
 
+main,
+.card,
+.card_content-wrapper,
+.card_content-text-wrapper,
+.card_price-wrapper {
+  display: flex;
+}
+
 main {
   background-color: var(--cream);
-  display: flex;
-  flex-direction: column;
+  flex-flow: column;
   place-items: center;
 }
 
 .card {
-  display: flex;
   flex-flow: column;
   gap: 0;
   margin-block: var(--space-500);
@@ -79,8 +72,8 @@ main {
   overflow: hidden;
 }
 
-.card_img-wrapper{
-    height: 34.2rem;
+.card_img-wrapper {
+  height: 34.2rem;
   overflow: hidden;
 }
 
@@ -92,11 +85,75 @@ main {
 }
 
 .card_content-wrapper {
-  display: flex;
   flex-flow: column;
   gap: var(--space-300);
   padding: var(--space-400);
   background-color: var(--white);
+}
+
+.card_content-text-wrapper {
+  flex-flow: column;
+  gap: var(--space-300);
+}
+
+.card_title {
+  font: var(--font-xl);
+  color: var(--black);
+}
+
+.card_category {
+  order: -1;
+  font: var(--font-xs);
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.card_description {
+  font: var(--font-body);
+  color: var(--grey);
+}
+
+.card_price-wrapper {
+  gap: var(--space-200);
+  align-items: center;
+}
+
+.card_current-price {
+  font: var(--font-xl);
+  color: var(--green-500);
+}
+
+.card_old-price {
+  font: var(--font-s);
+  color: var(--grey);
+  text-decoration: line-through;
+}
+
+.card_btn {
+  padding-block: var(--space-200);
+  padding-inline: var(--space-400);
+  background-color: var(--green-500);
+  color: var(--white);
+  border-radius: 0.8rem;
+  font: var(--font-btn);
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s ease-out;
+}
+
+.card_btn:hover,
+.card_btn:focus {
+  background-color: var(--green-700);
+}
+
+.card_btn-icon {
+  content: url(../images/icon-cart.svg);
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: bottom;
+  margin-inline-end: var(--space-100);
 }
 
 /*attribution*/
@@ -107,4 +164,27 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    place-content: center;
+  }
+  .card {
+    flex-flow: row;
+    height: 46.2rem;
+    max-width: 60rem;
+  }
+
+  .card_img-wrapper,
+  .card_content-wrapper {
+    width: 50%;
+  }
+
+  .card_img-wrapper {
+    height: 100%;
+  }
 }

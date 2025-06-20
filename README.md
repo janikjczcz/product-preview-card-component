@@ -28,13 +28,12 @@ This is a solution to the [Product preview card component challenge on Frontend 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - Mobile first CSS
 
 ### What I learned
 
-**add when completed**
+Used import for fonts instead of local files
 
 ## Author
 
