@@ -187,4 +187,8 @@ main {
   .card_img-wrapper {
     height: 100%;
   }
+
+  .card_content-wrapper {
+    gap: var(--space-400);
+  }
 }
